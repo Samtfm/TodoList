@@ -10,20 +10,18 @@ class TodoForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     const unique_id = new Date().getTime();
-    this.setState({id: unique_id})
-    console.log(this.receiveTodo);
-    console.log(this.state);
-    this.receiveTodo(this.state)
+    this.setState({id: unique_id});
+    this.receiveTodo(this.state);
   }
 
   updateTitle(e) {
     const title = e.target.value;
-    this.setState({title})
+    this.setState({title});
   }
 
   updateBody(e) {
     const body = e.target.value;
-    this.setState({body})
+    this.setState({body});
   }
 
 
@@ -35,15 +33,15 @@ class TodoForm extends React.Component{
         </label>
 
         <label>Body
-        <input type='text' value={this.state.body} onChange={this.updateBody.bind(this)}/>
+          <input type='text' value={this.state.body} onChange={this.updateBody.bind(this)}/>
         </label>
 
         <input type='submit' value="Submit" />
 
       </form>
-    )
+    );
   }
 
 }
 
-export default TodoForm
+export default TodoForm;
