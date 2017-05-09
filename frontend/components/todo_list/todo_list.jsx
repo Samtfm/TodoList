@@ -6,7 +6,7 @@ import TodoForm from './todo_form'
 const TodoList = (props) => (
   <div>
     <ul>
-    { props.todos.map(todo => <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} />) }
+    { props.todos.map(todo => <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} receiveTodo={props.receiveTodo}/>) }
     </ul>
     <TodoForm action={props.receiveTodo}/>
   </div>
